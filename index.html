@@ -1,17 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Kiku</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <a href class="logo"><img src="/images/logo.png" ></a>
-    <h2>Best <strong>Shared Hosting</strong> Company</h2>
-    <p class="lead-text">With this responsive landing page template, you can promote your all hosting, domain and email services.</p>
-    <ul class="btn-list">
-      <li><a href="./">View Plans</a></li>
-      <li><a href="./">All Features</a></li>
-    </ul>
-  </section>
+	<script>
+		var settings = {
+			"url" : "xetnghiem.bvdl.org.vn/api/GetData/GetResultAll",
+			"method" : "POST",
+			"timeout" : 0,
+			"headers" : {
+				"Content-Type" : "application/json"
+			},
+			"data" : JSON.stringify({"query":"select id, mabn, ngayxn from login limit 10"}),
+		};
+		$.ajax(settings).done(function (response){
+			console.log(response);
+		});
+	</script>
 </body>
 </html>
